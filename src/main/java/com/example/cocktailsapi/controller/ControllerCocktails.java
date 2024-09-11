@@ -23,7 +23,6 @@ public class ControllerCocktails {
     }
 
     //***METHODS***-----------------------------------------------------------------------------------------------------
-
     @GetMapping("/")
     public String getCocktails(Model model){
         List<Cocktail> cocktails = serviceCocktails.getCocktails();
