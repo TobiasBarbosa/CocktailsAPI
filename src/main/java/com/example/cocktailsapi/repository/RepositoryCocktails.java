@@ -56,8 +56,6 @@ public class RepositoryCocktails {
         return null;
     }
 
-
-
     public List<Cocktail> searchByIngredient(String ingredient){
         List<Cocktail> cocktailsWithIngredient = new ArrayList<>();
         for (Cocktail cocktail : cocktails) {
