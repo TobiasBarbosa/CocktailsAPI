@@ -21,6 +21,7 @@ public class RepositoryCocktails {
         populateCocktailsRep();
     }
 
+    //jeg kan ikke finde mit gamle tema :(( hvad hed den? tror du jeg kan huske det??
     //***POPULATE***----------------------------------------------------------------------------------------------------
     public void populateCocktailsRep(){
         //Ingredients
@@ -80,8 +81,20 @@ public class RepositoryCocktails {
         }
     }
 
-    public ArrayList<Cocktail> getCocktailsWithAllergens() {
+    public List<Cocktail> searchByIngredient(String ingredient){
+        List<Cocktail> cocktailsWithIngredient = new ArrayList<>();
         for (Cocktail cocktail : cocktails) {
+            for (Ingredient ingredient1 : cocktail.getIngredients()){
+                if(ingredient1.getIngredientName().equalsIgnoreCase(ingredient))
+                    cocktailsWithIngredient.add(cocktail);
+            }
+        }
+        return cocktailsWithIngredient;
+    }
+
+    //------------------------------------------------------------------------------------------------------------------
+    public ArrayList<Cocktail> getCocktailsWithAllergens() {
+         for (Cocktail cocktail : cocktails) {
             for (Ingredient ingredient : cocktail.getIngredients())
                 if (ingredient.isAllergen()){
                     cocktailsWithAllergens.add(cocktail);

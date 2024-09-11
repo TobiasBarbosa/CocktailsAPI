@@ -22,10 +22,10 @@ public class Ingredient {
     }
 
     //***TO STRING METHOD***--------------------------------------------------------------------------------------------
-    @Override
-    public String toString(){
-        return "Ingredient: " + ingredientName;
-    }
+//    @Override
+//    public String toString(){
+//        return "Ingredient: " + ingredientName;
+//    }
 
     //***END***---------------------------------------------------------------------------------------------------------
 }

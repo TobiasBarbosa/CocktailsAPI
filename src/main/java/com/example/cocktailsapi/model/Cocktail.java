@@ -34,16 +34,16 @@ public class Cocktail {
     }
 
     //***TO STRING METHOD***--------------------------------------------------------------------------------------------
-    @Override
-    public String toString(){
-        String cocktail = "Cocktail: " + name + "\n" +
-                          "Ingredients: ";
-        for(Ingredient ingredient : getIngredients()){
-            cocktail += ingredient + ", ";
-        }
-
-        return cocktail;
-    }
+//    @Override
+//    public String toString(){
+//        String cocktail = "Cocktail: " + name + "\n" +
+//                          "Ingredients: ";
+//        for(Ingredient ingredient : getIngredients()){
+//            cocktail += ingredient + ", ";
+//        }
+//
+//        return cocktail;
+//    }
 
     //***END***---------------------------------------------------------------------------------------------------------
 }

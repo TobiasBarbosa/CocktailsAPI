@@ -5,6 +5,7 @@ import com.example.cocktailsapi.repository.RepositoryCocktails;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ServiceCocktails {
@@ -44,6 +45,10 @@ public class ServiceCocktails {
 
     public ArrayList<Cocktail> getCocktailsWithoutAllergens(){
         return repositoryCocktails.getCocktailsWithoutAllergens();
+    }
+
+    public List<Cocktail> searchByIngredient(String ingredient){
+        return repositoryCocktails.searchByIngredient(ingredient);
     }
 
     //***END***---------------------------------------------------------------------------------------------------------

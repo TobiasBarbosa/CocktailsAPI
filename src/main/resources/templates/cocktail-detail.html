@@ -9,11 +9,11 @@
 <ul>
     <li th:each="ingredient : ${cocktail.getIngredients()}">
         <span th:if="${ingredient.isAllergen()}" th:text="${ingredient.getIngredientName()}" class="allergen"></span>
-        <span th:if="${ingredient.isAllergen()}" th:text="${ingredient.getIngredientName()}"></span>
+        <span th:if="${!ingredient.isAllergen()}" th:text="${ingredient.getIngredientName()}"></span>
     </li>
 </ul>
 
-<a href="/">Get back to cocktail list</a>
+<a href="/cocktails/">Get back to cocktail list</a>
 
 </body>
 </html>

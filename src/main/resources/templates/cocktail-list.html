@@ -5,10 +5,18 @@
     <title>Cocktail list</title>
 </head>
 <body>
+<h1>Cocktail recipes</h1>
+
+<form action="/cocktails/search" method="get">
+    <label for="ingredient">Search by ingredient</label>
+    <input type="text" id="ingredient" name="ingredient" placeholder="Enter ingredient" th:value="${ingredient != null}
+    ? ${ingredient} : ''">
+    <button type="submit">Search</button>
+</form>
+
 <ul>
     <li th:each="cocktail : ${cocktails}">
-        <a th:href="@{'/cocktail?name=' + ${cocktail.getName()}}" th:text="${cocktail.getName()}"></a>
-
+        <a th:href="@{'/cocktails/cocktail?name=' + ${cocktail.getName()}}" th:text="${cocktail.getName()}"></a>
     </li>
 </ul>
 
