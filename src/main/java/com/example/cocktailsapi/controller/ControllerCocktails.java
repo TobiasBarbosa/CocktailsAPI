@@ -38,12 +38,6 @@ public class ControllerCocktails {
         return "cocktail-detail";
     }
 
-    @PostMapping("/add")
-    public String addCocktail(@ModelAttribute Cocktail cocktail){
-        serviceCocktails.addCocktail(cocktail);
-        return "redirect:/addCocktail";
-    }
-
     @GetMapping("/search")
     public String searchByIngredient(@RequestParam("ingredient") String ingredient, Model model){
         List<Cocktail> cocktails = serviceCocktails.searchByIngredient(ingredient);
@@ -51,6 +45,12 @@ public class ControllerCocktails {
 //        model.addAttribute("ingredients", ingredient);
         return "cocktail-list";
     }
+
+    //    @PostMapping("/add")
+//    public String addCocktail(@ModelAttribute Cocktail cocktail){
+//        serviceCocktails.addCocktail(cocktail);
+//        return "redirect:/addCocktail";
+//    }
 
     //***END***---------------------------------------------------------------------------------------------------------
 }
