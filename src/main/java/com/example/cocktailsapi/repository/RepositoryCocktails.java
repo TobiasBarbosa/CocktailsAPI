@@ -97,10 +97,9 @@ public class RepositoryCocktails {
             for (Ingredient ingredient : cocktail.getIngredients())
                 if (ingredient.isAllergen()){
                     cocktailsWithAllergens.add(cocktail);
-                    return cocktailsWithAllergens;
                 }
         }
-        return null;
+        return cocktailsWithAllergens;
     }
 
     public ArrayList<Cocktail> getCocktailsWithoutAllergens() {
@@ -108,10 +107,9 @@ public class RepositoryCocktails {
             for (Ingredient ingredient : cocktail.getIngredients())
                 if (!ingredient.isAllergen()){
                     cocktailsWithoutAllergens.add(cocktail);
-                    return cocktailsWithoutAllergens;
                 }
         }
-        return null;
+        return cocktailsWithoutAllergens;
     }
 
     //***END***---------------------------------------------------------------------------------------------------------
