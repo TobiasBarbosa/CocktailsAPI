@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail ingredients</title>
+</head>
+<body>
+<h1 th:text="${cocktail.getName()}"></h1>
+<ul>
+    <li th:each="ingredient : ${cocktail.getIngredients()}">
+        <span th:if="${ingredient.isAllergen()}" th:text="${ingredient.getIngredientName()}" class="allergen"></span>
+        <span th:if="${ingredient.isAllergen()}" th:text="${ingredient.getIngredientName()}"></span>
+    </li>
+</ul>
+
+<a href="/">Get back to cocktail list</a>
+
+</body>
+</html>

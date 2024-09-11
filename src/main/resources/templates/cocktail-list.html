@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cocktail list</title>
+</head>
+<body>
+<ul>
+    <li th:each="cocktail : ${cocktails}">
+        <a th:href="@{'/cocktail?name=' + ${cocktail.getName()}}" th:text="${cocktail.getName()}"></a>
+
+    </li>
+</ul>
+
+</body>
+</html>
