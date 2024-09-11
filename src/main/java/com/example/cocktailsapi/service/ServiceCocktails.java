@@ -27,16 +27,22 @@ public class ServiceCocktails {
        return repositoryCocktails.findCocktailByName(name);
     }
 
+    public List<Cocktail> searchByIngredient(String ingredient){
+        return repositoryCocktails.searchByIngredient(ingredient);
+    }
+
+    //***NO USE METHODS***----------------------------------------------------------------------------------------------
+
     public Cocktail addCocktail(Cocktail cocktail){
         return repositoryCocktails.addCocktail(cocktail);
     }
 
-    public Cocktail updateAttraction(String searchName, Cocktail cocktail){
-        return repositoryCocktails.updateAttraction(searchName,cocktail);
+    public Cocktail updateCocktail(String searchName, Cocktail cocktail){
+        return repositoryCocktails.updateCocktail(searchName,cocktail);
     }
 
     public void removeCocktail(String searchName){
-        repositoryCocktails.removeAttraction(searchName);
+        repositoryCocktails.removeCocktail(searchName);
     }
 
     public ArrayList<Cocktail> getCocktailsWithAllergens(){
@@ -45,10 +51,6 @@ public class ServiceCocktails {
 
     public ArrayList<Cocktail> getCocktailsWithoutAllergens(){
         return repositoryCocktails.getCocktailsWithoutAllergens();
-    }
-
-    public List<Cocktail> searchByIngredient(String ingredient){
-        return repositoryCocktails.searchByIngredient(ingredient);
     }
 
     //***END***---------------------------------------------------------------------------------------------------------

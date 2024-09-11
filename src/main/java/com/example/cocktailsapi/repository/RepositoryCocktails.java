@@ -56,29 +56,7 @@ public class RepositoryCocktails {
         return null;
     }
 
-    public Cocktail addCocktail(Cocktail cocktail){
-        cocktails.add(cocktail);
-        return cocktail;
-    }
 
-    public Cocktail updateAttraction(String searchName, Cocktail cocktail){
-        for(Cocktail cocktail1 : cocktails){
-            if(cocktail1.getName().equalsIgnoreCase(searchName)){
-                cocktail1.setName(cocktail.getName());
-                cocktail1.setIngredients(cocktail.getIngredients());
-                return cocktail1;
-            }
-        }
-        return null;
-    }
-
-    public void removeAttraction(String searchName){
-        for(Cocktail cocktail : cocktails){
-            if(cocktail.getName().equalsIgnoreCase(searchName)){
-                cocktails.remove(cocktail);
-            }
-        }
-    }
 
     public List<Cocktail> searchByIngredient(String ingredient){
         List<Cocktail> cocktailsWithIngredient = new ArrayList<>();
@@ -91,7 +69,31 @@ public class RepositoryCocktails {
         return cocktailsWithIngredient;
     }
 
-    //------------------------------------------------------------------------------------------------------------------
+    //***NO USE METHODS***----------------------------------------------------------------------------------------------
+    public Cocktail addCocktail(Cocktail cocktail){
+        cocktails.add(cocktail);
+        return cocktail;
+    }
+
+    public Cocktail updateCocktail(String searchName, Cocktail cocktail){
+        for(Cocktail cocktail1 : cocktails){
+            if(cocktail1.getName().equalsIgnoreCase(searchName)){
+                cocktail1.setName(cocktail.getName());
+                cocktail1.setIngredients(cocktail.getIngredients());
+                return cocktail1;
+            }
+        }
+        return null;
+    }
+
+    public void removeCocktail(String searchName){
+        for(Cocktail cocktail : cocktails){
+            if(cocktail.getName().equalsIgnoreCase(searchName)){
+                cocktails.remove(cocktail);
+            }
+        }
+    }
+
     public ArrayList<Cocktail> getCocktailsWithAllergens() {
          for (Cocktail cocktail : cocktails) {
             for (Ingredient ingredient : cocktail.getIngredients())
