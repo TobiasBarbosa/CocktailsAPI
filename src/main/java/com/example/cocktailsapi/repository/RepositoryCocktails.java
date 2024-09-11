@@ -21,7 +21,6 @@ public class RepositoryCocktails {
         populateCocktailsRep();
     }
 
-    //jeg kan ikke finde mit gamle tema :(( hvad hed den? tror du jeg kan huske det??
     //***POPULATE***----------------------------------------------------------------------------------------------------
     public void populateCocktailsRep(){
         //Ingredients
