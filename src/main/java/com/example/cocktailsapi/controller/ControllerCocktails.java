@@ -46,6 +46,8 @@ public class ControllerCocktails {
         return "cocktail-list";
     }
 
+    //***NO USE METHODS***----------------------------------------------------------------------------------------------
+
     //    @PostMapping("/add")
 //    public String addCocktail(@ModelAttribute Cocktail cocktail){
 //        serviceCocktails.addCocktail(cocktail);
